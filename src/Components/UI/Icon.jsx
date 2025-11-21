@@ -7,7 +7,7 @@ import { AiOutlineYoutube } from "react-icons/ai";
 
 const Icon = () => {
   return (
-    <div className='flex items-center gap-2'>
+    <div className='hidden sm:flex items-center gap-2'>
       <TbBrandFacebook className='w-8 cursor-pointer text-[20px]' />
       <BsInstagram className='w-8 cursor-pointer text-[20px]' />
       <FaXTwitter className='w-8 cursor-pointer text-[20px]' />

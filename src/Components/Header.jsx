@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { TiThMenu } from "react-icons/ti";
+import { TiThMenu } from "react-icons/ti";
 import Container from "./Layouts/Container";
 import Flex from "./Layouts/Flex";
 import Image from "./UI/Image";
@@ -8,7 +8,8 @@ import ListItems from "./UI/ListItems";
 import Icon from "./UI/Icon";
 import { IoSearchCircleSharp } from "react-icons/io5";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import Category from "./UI/Category";
 
 const Header = () => {
    let handleScrollToHome = () => {
@@ -45,16 +46,26 @@ const Header = () => {
 
    let [moreShow, setMoreShow] = useState(false);
    let handleToggleMore = () => {
-      setMoreShow(!moreShow)
+      setMoreShow(!moreShow);
+   };
+
+   let [menuShow, setMenuShow] = useState(false);
+   let handleToggleMenu = () => {
+      setMenuShow(!menuShow);
    };
 
    return (
-      <header className=" sticky top-0 z-[9999]">
-         <nav className="bg-[#F2F2F2] py-4 shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]  relative z-[9999]">
+      <header className="sticky top-0 z-9999">
+         <nav className=" p-4 bg-[#F2F2F2] sm:py-4 shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]  relative z-9999">
+                  
             <Container>
-               <Flex className="items-center justify-between">
+               <Flex className="items-center justify-between relative">
+                  <Category menuShow={menuShow}/>
                   <div className="flex items-center gap-5">
-                     {/* <TiThMenu className="text-2xl cursor-pointer" /> */}
+                     <TiThMenu
+                        onClick={handleToggleMenu}
+                        className="block sm:hidden text-2xl cursor-pointer"
+                     />
 
                      <Image
                         src={Logo}
@@ -64,38 +75,84 @@ const Header = () => {
                      />
                   </div>
 
-                  <ul className="flex items-center gap-6 relative">
-                     <ListItems onClick={handleScrollToHome} list={"Home"} />
+                  <ul className="hidden sm:flex items-center gap-6 relative">
+                     <ListItems
+                        onClick={handleScrollToHome}
+                        list={"Home"}
+                        className="text-[20px] hover:font-medium"
+                     />
                      <ListItems
                         onClick={handleScrollToHillTrack}
                         list={"Hill Districts"}
+                        className="text-[20px] hover:font-medium"
                      />
                      <ListItems
                         onClick={handleScrollTopolitics}
                         list={"Politics"}
+                        className="text-[20px] hover:font-medium"
                      />
                      <ListItems
                         onClick={handleScrollToNatAdd}
                         list={"National"}
+                        className="text-[20px] hover:font-medium"
                      />
                      <ListItems
                         onClick={handleScrollToNatAdd}
                         list={"Administrative"}
+                        className="text-[20px] hover:font-medium"
                      />
-                     <span className="flex items-center"><ListItems onClick={handleToggleMore} list={"More"} /> <MdOutlineKeyboardArrowDown onClick={handleToggleMore} className="cursor-pointer bg-transparent text-black" /></span>
+                     <span className="flex items-center">
+                        <ListItems
+                           onClick={handleToggleMore}
+                           list={"More"}
+                           className="text-[20px] hover:font-medium"
+                        />
+                        <MdOutlineKeyboardArrowDown
+                           onClick={handleToggleMore}
+                           className={`${
+                              moreShow
+                                 ? "hidden"
+                                 : "cursor-pointer bg-transparent text-black"
+                           }`}
+                        />
+                        <MdOutlineKeyboardArrowUp
+                           onClick={handleToggleMore}
+                           className={`${
+                              moreShow
+                                 ? "cursor-pointer bg-transparent text-black"
+                                 : "hidden"
+                           }`}
+                        />
+                     </span>
 
-
-                    <span className={`${moreShow ?  "w-auto  bg-[#F5F5F5] rounded-xl top-[50px] -right-15 absolute" : "hidden"}`}>
-                      <ListItems list={"Education"} className="hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300" />
-                     <ListItems list={"Health"} className="hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"/>
-                     <ListItems list={"Court & Law"} className="hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"/>
-                    </span>
+                     <span
+                        className={`${
+                           moreShow
+                              ? "w-auto  bg-[#F5F5F5] rounded-xl top-[50px] -right-15 absolute"
+                              : "hidden"
+                        }`}>
+                        <ListItems
+                           list={"Education"}
+                           className="text-[20px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
+                        />
+                        <ListItems
+                           list={"Health"}
+                           className="text-[20px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
+                        />
+                        <ListItems
+                           list={"Court & Law"}
+                           className="text-[20px] hover:font-medium hover:bg-[#ffffff] hover:rounded-xl px-4 py-1 transition-all duration-300"
+                        />
+                     </span>
                   </ul>
 
-                  <Flex className="items-center gap-6">
+                  <div className="flex items-center gap-6">
                      <Icon />
+                     <div className="flex items-center gap-1">
+                        {/* <input type="text" className="border rounded-xl text-[16px] px-2 py-0.5 border-[#929292] bg-[#ffffff]" /> */}
                      <IoSearchCircleSharp className="text-[35px] rounded-full cursor-pointer " />
-                  </Flex>
+                     </div>
+                  </div>
                </Flex>
             </Container>
          </nav>

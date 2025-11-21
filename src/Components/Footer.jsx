@@ -12,9 +12,9 @@ import { IoLogoTiktok } from "react-icons/io5";
 
 const Footer = () => {
    return (
-      <footer className="bg-[#181B22] py-12">
+      <footer className="bg-[#181B22] pt-12">
          <Container>
-            <Flex className="items-start justify-between">
+            <Flex className="items-start justify-between mb-12">
                <div className=" text-textcol2">
                   <h2 className="mb-6 font-rob text-2xl font-semibold leading-6">
                      About
@@ -65,6 +65,7 @@ const Footer = () => {
                   </div>
                </div>
             </Flex>
+            <div className="font-rob font-normal text-center text-[16px] text-[#666666] pb-2"> &copy; Copyright 2025 NewsInsight. All rights reserved.</div>
          </Container>
       </footer>
    );

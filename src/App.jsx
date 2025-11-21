@@ -5,6 +5,7 @@ import HillTracts from './Components/HillTracts'
 import Bangla from './Components/Bangla'
 import Natinal_Addm from './Components/Natinal_Addm'
 import Footer from './Components/Footer'
+import Category from './Components/UI/Category'
 
 
 const App = () => {
