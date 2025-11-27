@@ -4,7 +4,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 const MostReadDisBn = ({ newsbn }) => {
    return (
-      <div className="w-[290px] mt-4 inline-block">
+      <div className="w-full mt-4 px-2 inline-block">
          <img src={newsbn.img} alt={newsbn.head} />
          <h2 className="mt-2 font-noto font-medium text-[20px] text-textcol2 cursor-pointer hover:text-hvcol transition-all duration-300">
             {newsbn.head.slice(0,60)} {newsbn.head.length > 60 && "..."}

@@ -93,14 +93,22 @@ const MostRead = () => {
             <h2 className="font-rob font-medium text-[24px] text-[#262626]">
                Most Read
             </h2>
-            <div className="w-[900px] h-px bg-black"></div>
+            <div className="sm:w-[900px] w-0 sm:h-px h-0 bg-black"></div>
          </div>
 
-         <Slider {...settings}>
-            {mstRead.map((item, index) => (
-               <MostReadDis key={index} news={item} />
-            ))}
-         </Slider>
+         <div className="w-full hidden sm:block">
+            <Slider {...settings}>
+               {mstRead.map((item, index) => (
+                  <MostReadDis key={index} news={item} />
+               ))}
+            </Slider>
+         </div>
+
+         <div>
+             {mstRead.map((item, index) => (
+                  <MostReadDis key={index} news={item} />
+               ))}
+         </div>
       </section>
    );
 };

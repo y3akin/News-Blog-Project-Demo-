@@ -10,11 +10,10 @@ const Category = ({ menuShow }) => {
    };
    return (
       <div
-         className={`${
-            menuShow
-               ? "max-w-[220px] px-4 bg-[#F2F2F2] rounded-br-2xl shadow-[0px_8px_35px_0px_rgba(0,0,0,0.1)] absolute top-[55.5px] -left-5"
-               : "hidden"
-         }`}>
+         className={`bg-[#F2F2F2] rounded-br-2xl shadow-[0px_8px_35px_0px_rgba(0,0,0,0.1)]
+      absolute top-[55.5px] -left-5 transition-all duration-300 overflow-hidden
+      ${menuShow ? "opacity-100 max-w-[220px] px-4" : "opacity-0 max-w-0 px-0"}
+   `}>
          <h2 className="mt-4 font-rob font-medium text-[20px] border-b border-[#DCDCDC] leading-6 p-2">
             Category
          </h2>

@@ -4,9 +4,10 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 const MostReadDis = ({ news }) => {
    return (
-      <div className="w-[290px] mt-4">
-         <img src={news.img} alt={news.head} />
-         <h2 className="mt-2 font-rob font-medium text-[20px] text-textcol cursor-pointer hover:text-hvcol transition-all duration-300">
+      <div className="w-full mt-4 px-2 flex sm:block">
+         <img src={news.img} alt={news.head} className="w-[124px] sm:w-auto" />
+         <div>
+            <h2 className="mt-2 font-rob font-medium text-[20px] text-textcol cursor-pointer hover:text-hvcol transition-all duration-300">
             {news.head.slice(0,50)} {news.head.length > 50 && "..."}
          </h2>
 
@@ -20,6 +21,7 @@ const MostReadDis = ({ news }) => {
                {news.views}
             </h6>
          </Flex>
+         </div>
       </div>
    );
 };

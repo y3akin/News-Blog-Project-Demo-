@@ -54,13 +54,23 @@ const Header = () => {
       setMenuShow(!menuShow);
    };
 
+   let [search, setSearch] = useState(false);
+   let [searchText, setSearchText] = useState("");
+
+   let handleSearchMenu = () => {
+      if (searchText.trim() !== "") {
+         console.log("Searching for:", searchText);
+      } else {
+         setSearch(!search);
+      }
+   };
+
    return (
       <header className="sticky top-0 z-9999">
          <nav className=" p-4 bg-[#F2F2F2] sm:py-4 shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]  relative z-9999">
-                  
             <Container>
                <Flex className="items-center justify-between relative">
-                  <Category menuShow={menuShow}/>
+                  <Category menuShow={menuShow} />
                   <div className="flex items-center gap-5">
                      <TiThMenu
                         onClick={handleToggleMenu}
@@ -149,8 +159,20 @@ const Header = () => {
                   <div className="flex items-center gap-6">
                      <Icon />
                      <div className="flex items-center gap-1">
-                        {/* <input type="text" className="border rounded-xl text-[16px] px-2 py-0.5 border-[#929292] bg-[#ffffff]" /> */}
-                     <IoSearchCircleSharp className="text-[35px] rounded-full cursor-pointer " />
+                        <input
+                           value={searchText}
+                           onChange={(e) => setSearchText(e.target.value)}
+                           type="text"
+                           placeholder="Search Here..."
+                           className={`font-rob transition-all duration-300 text-[16px] px-2 py-0.5 bg-white border rounded-xl
+         ${search ? "opacity-100 w-30 sm:w-40" : "opacity-0 w-0 p-0 border-0"}
+      `}
+                        />
+
+                        <IoSearchCircleSharp
+                           onClick={handleSearchMenu}
+                           className="text-[35px] rounded-full cursor-pointer "
+                        />
                      </div>
                   </div>
                </Flex>

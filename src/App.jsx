@@ -14,9 +14,9 @@ const App = () => {
       <Header/>
       <Banner/>
       <HillTracts/>
-      <Bangla/>
+      {/* <Bangla/>
       <Natinal_Addm/>
-      <Footer/>
+      <Footer/> */}
     </>
   )
 }

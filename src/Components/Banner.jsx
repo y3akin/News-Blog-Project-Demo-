@@ -59,9 +59,9 @@ const Banner = () => {
    ];
 
    return (
-      <section className=" bg-[#F2F2F2] pt-6 pb-12" id="home">
+      <section className=" bg-[#FFFFFF] sm:bg-[#F2F2F2] pt-6 pb-12" id="home">
          <Container>
-            <div className="flex flex-col sm:flex-row items-center gap-[30px]  px-4 sm:p-0">
+            <div className="flex flex-col sm:flex-row items-center gap-[30px]  sm:p-0">
                <div>
                   {bannerTopNews.map((topitem) => (
                      <TopNews topnews={topitem} />
@@ -70,7 +70,7 @@ const Banner = () => {
 
                <div className="hidden sm:w-px h-[614px] bg-[#DCDCDC]"></div>
 
-               <div className=" hidden sm:block bg-[#DCDCDC] sm:bg-transparent">
+               <div className=" hidden sm:block bg-[#FFFFFF] sm:bg-transparent">
                   <div className=" flex flex-col gap-8 items-center">
                      {newsHeadLine.map((item, index) => (
                         <NewsHead key={index} head={item} />
@@ -79,7 +79,7 @@ const Banner = () => {
                </div>
             </div>
 
-            <div className="block sm:hidden bg-[#DCDCDC] sm:bg-transparent mt-6 pt-6 p-4">
+            <div className="block sm:hidden bg-[#F2F2F2] sm:bg-transparent mt-6 pt-6 p-4">
                <div className="sm:hidden flex items-center gap-2.5 mb-6">
                   <h2 className="font-rob font-medium text-xl text-[#262626]">
                      Latest
@@ -87,14 +87,16 @@ const Banner = () => {
                   <div className="w-full h-px bg-black"></div>
                </div>
                <div className=" flex flex-col gap-8 items-start">
-                  {newsHeadLine.map((item, index) => (
-                     <NewsHead key={index} head={item} />
+                  {newsHeadLine.map((item, i) => (
+                     <NewsHead key={i} head={item}   isLast={i === newsHeadLine.length - 1}/>
+                     
                   ))}
                </div>
             </div>
 
-            <div className="relative">
+            <div className="relative ">
                <MostRead />
+               
             </div>
          </Container>
       </section>
