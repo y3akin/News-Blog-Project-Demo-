@@ -74,7 +74,7 @@ const Bangla = () => {
                                        </div>
            </div>
 
-            <Flex className="items-center gap-12 mt-8">
+            <div className="flex flex-col sm:flex-row items-center gap-12 mt-8">
                <div> 
                   <h2 className="font-noto font-normal mb-4 text-[24px]  text-textcol2">রাজনীতি</h2>
                   {banglaTopNews.map((newsbn, index) => (
@@ -91,7 +91,7 @@ const Bangla = () => {
                      <NewsHeadBn key={index} headbn={bnitem}/>
                   ))}
                </div>
-            </Flex>
+            </div>
 
             <MostReadBn/>
          </Container>

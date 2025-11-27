@@ -1,11 +1,11 @@
 import React from "react";
 import { MdOutlineWatchLater } from "react-icons/md";
 
-const NewsHead = ({ head, isLast }) => {
+const NewsHead = ({ head, bBorder }) => {
    return (
       <div
          className={`flex justify-between items-center gap-3 ${
-            !isLast ? "border-b" : ""
+            !bBorder ? "border-b" : ""
          } sm:border-0 border-[#DCDCDC] pb-6 sm:pb-0`}>
          <div className="w-60 sm:w-[380px]">
             <h2 className="font-rob text-[16px] sm:text-[20px] sm:leading-[30px] font-medium text-textcol cursor-pointer hover:text-hvcol transition-all duration-300">
@@ -13,7 +13,7 @@ const NewsHead = ({ head, isLast }) => {
                {head.head.slice(0, 25)}
                {head.head.length > 25 && "..."}
             </h2>
-            <div className="flex items-center mt-2 gap-2">
+            <div className="flex items-center gap-2">
                <h6 className="flex text-[14px] items-center gap-2 font-rob ">
                   <MdOutlineWatchLater />
                   {head.pubsh_time}

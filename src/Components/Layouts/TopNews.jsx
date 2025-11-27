@@ -16,7 +16,7 @@ const TopNews = ({ topnews }) => {
                   <span className="w-px h-full bg-black absolute top-0 -left-2"></span>
                {topnews.desp}
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex mt-2 items-center gap-2">
                <h6 className="font-rob text-[14px] font-normal ">
                   {topnews.time}
                </h6>

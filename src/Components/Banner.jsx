@@ -61,7 +61,7 @@ const Banner = () => {
    return (
       <section className=" bg-[#FFFFFF] sm:bg-[#F2F2F2] pt-6 pb-12" id="home">
          <Container>
-            <div className="flex flex-col sm:flex-row items-center gap-[30px]  sm:p-0">
+            <div className="flex flex-col sm:flex-row items-center gap-[30px]  ">
                <div>
                   {bannerTopNews.map((topitem) => (
                      <TopNews topnews={topitem} />
@@ -88,7 +88,7 @@ const Banner = () => {
                </div>
                <div className=" flex flex-col gap-8 items-start">
                   {newsHeadLine.map((item, i) => (
-                     <NewsHead key={i} head={item}   isLast={i === newsHeadLine.length - 1}/>
+                     <NewsHead key={i} head={item}   bBorder={i === newsHeadLine.length - 1}/>
                      
                   ))}
                </div>

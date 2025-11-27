@@ -171,7 +171,7 @@ const Header = () => {
 
                         <IoSearchCircleSharp
                            onClick={handleSearchMenu}
-                           className="text-[35px] rounded-full cursor-pointer "
+                           className="text-[35px] rounded-full cursor-pointer"
                         />
                      </div>
                   </div>
