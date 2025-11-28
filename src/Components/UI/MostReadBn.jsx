@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const MostReadBn = () => {
    let mstReadBn = [
@@ -114,7 +115,7 @@ const MostReadBn = () => {
       prevArrow: <PrevArrow />,
    };
    return (
-      <section className="mt-6 ">
+      <section className="mt-10 ">
          <div className="flex flex-col justify-center w-fit gap-2">
             <h2 className="font-noto font-normal text-[24px] text-textcol2">
                সর্বাধিক পঠিত
@@ -130,11 +131,16 @@ const MostReadBn = () => {
             </Slider>
          </div>
 
-         <div className="w-full sm:hidden block">
+        <div>
+          <div className="w-full sm:hidden block">
             {mstReadBn2.map((item, i) => (
                <MostReadDisBn key={i} newsbn={item} bBorder={i === mstReadBn2.length - 1} />
             ))}
          </div>
+         <button className="flex sm:hidden mt-6 mx-auto items-center gap-1 font-noto font-normal leading-3.5 text-[14px] text-textcol2 p-3 border border-textcol2 rounded-3xl bg-[#1E222B] hover:bg-textcol2 hover:text-textcol transition-all duration-300">
+                        আরও পড়ুন <BsArrowUpRight />
+                     </button>
+        </div>
       </section>
    );
 };

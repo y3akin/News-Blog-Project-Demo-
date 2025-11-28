@@ -3,7 +3,7 @@ import { MdOutlineWatchLater } from "react-icons/md";
 
 const NewsHeadBn = ({headbn}) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 border-b sm:border-0 border-[#262626] pb-6 sm:pb-0">
              <div>
                 <h2 className="font-noto text-[15px] sm:text-[20px] leading-[30px] font-normal sm:font-medium text-textcol2 cursor-pointer hover:text-hvcol transition-all duration-300">
                    <span className="text-[#BD713A]  ">{headbn.topic}</span>

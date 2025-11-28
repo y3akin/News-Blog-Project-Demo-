@@ -12,9 +12,9 @@ import { IoLogoTiktok } from "react-icons/io5";
 
 const Footer = () => {
    return (
-      <footer className="bg-[#181B22] pt-12">
+      <footer className="bg-[#181B22] pt-12 sm:px-0 px-6">
          <Container>
-            <Flex className="items-start justify-between mb-12">
+            <Flex className="flex-col sm:flex-row items-start justify-between mb-12">
                <div className=" text-textcol2">
                   <h2 className="mb-6 font-rob text-2xl font-semibold leading-6">
                      About
@@ -29,7 +29,7 @@ const Footer = () => {
                   </ul>
                </div>
                <div className=" text-textcol2">
-                  <h2 className="mb-6 font-rob text-2xl font-semibold leading-6">
+                  <h2 className="mb-6 font-rob text-2xl font-semibold leading-6 sm:mt-0 mt-12">
                      Media
                   </h2>
                   <ul className="flex flex-col gap-4">
@@ -39,7 +39,7 @@ const Footer = () => {
                   </ul>
                </div>
                <div className=" text-textcol2">
-                  <h2 className="mb-6 font-rob text-2xl font-semibold leading-6">
+                  <h2 className="mb-6 font-rob text-2xl font-semibold leading-6 sm:mt-0 mt-12">
                      Connect
                   </h2>
                   <ul className="flex flex-col gap-4">
@@ -49,13 +49,13 @@ const Footer = () => {
                   </ul>
                </div>
 
-               <div className="flex flex-col items-center">
+               <div className="flex flex-col items-center sm:mt-0 mt-12 mx-auto sm:mx-0">
                   <img src={FootLogo} alt="Foot_img" />
-                  <div className="w-[302px] mt-6 border border-textcol2 rounded-2xl flex flex-col items-center">
+                  <div className="w-[350px] sm:w-[302px] mt-6 border border-textcol2 rounded-2xl flex flex-col items-center">
                      <h2 className="mt-3 font-rob font-normal text-[20px] leading-6 text-white">
                         Follow us
                      </h2>
-                     <div className="mt-7 text-textcol2 flex items-center gap-4 mb-4">
+                     <div className="mt-7 text-textcol2 flex items-center sm:gap-4 gap-6 mb-4">
                         <TbBrandFacebook className="text-[30px] cursor-pointer" />
                         <FaInstagram className="text-[30px] cursor-pointer" />
                         <BsTwitterX className="text-[30px] cursor-pointer" />

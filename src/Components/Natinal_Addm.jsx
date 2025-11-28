@@ -94,7 +94,7 @@ const Natinal_Addm = () => {
                             <div className="w-[250px] sm:w-[320px] h-px bg-[#919191]"></div>
                           </div>
 
-                        <div className="flex items-center gap-1 hover:text-blue-500 transition-all duration-200">
+                        <div className="hidden sm:flex items-center gap-1 hover:text-blue-500 transition-all duration-200">
                           <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
                         <MdOutlineArrowOutward />
                         </div>
@@ -120,7 +120,7 @@ const Natinal_Addm = () => {
                      <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <h2 className="font-rob font-medium text-2xl tracking-[0.02em]">Administration</h2>
-                            <div className="w-[240px] h-px bg-[#919191]"></div>
+                            <div className="w-[170px] sm:w-60 h-px bg-[#919191]"></div>
                           </div>
                         <div className="px-3 flex items-center gap-1  hover:text-blue-500 transition-all duration-200">
                           <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
