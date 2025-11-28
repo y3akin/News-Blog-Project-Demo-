@@ -85,13 +85,13 @@ const Natinal_Addm = () => {
    return (
       <section className="mt-12" id="nat_add">
          <Container>
-            <Flex className="items-start justify-between gap-5">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-5">
                <div className="p-4 w-[580px]">
                   <div>
                       <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <h2 className="font-rob font-medium text-2xl tracking-[0.02em]">National</h2>
-                            <div className="w-[320px] h-px bg-[#919191]"></div>
+                            <div className="w-[250px] sm:w-[320px] h-px bg-[#919191]"></div>
                           </div>
 
                         <div className="flex items-center gap-1 hover:text-blue-500 transition-all duration-200">
@@ -140,7 +140,7 @@ const Natinal_Addm = () => {
                      ))}
                   </div>
                </div>
-            </Flex>
+            </div>
          </Container>
       </section>
    );

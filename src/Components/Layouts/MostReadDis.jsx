@@ -4,7 +4,7 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 const MostReadDis = ({ news, bBorder }) => {
    return (
-      <div className={`w-full mt-6 sm:mt-4 px-0 sm:px-2 flex gap-2 items-center sm:gap-0 sm:block  ${
+      <div className={`w-full mt-6 sm:mt-4 px-0 sm:px-2 flex gap-4 items-center sm:gap-0 sm:block  ${
             !bBorder ? "border-b" : ""
          } sm:border-0 border-[#DCDCDC] pb-6 sm:pb-0`}>
          <img src={news.img} alt={news.head} className="w-[124px] h-[84px] rounded-lg sm:h-auto sm:w-auto" />

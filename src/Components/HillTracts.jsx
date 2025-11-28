@@ -60,7 +60,7 @@ const HillTracts = () => {
    ];
 
    return (
-      <section className="mt-6 mb-12 sm:px-0 px-4" id="hillTrack">
+      <section className="m-0 sm:mt-6 mb-12 sm:px-0 px-4" id="hillTrack">
          <Container>
             <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">

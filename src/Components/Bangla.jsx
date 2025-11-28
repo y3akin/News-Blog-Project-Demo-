@@ -26,19 +26,19 @@ const Bangla = () => {
    let bnNewshead = [
       {
          topic: "",
-         head: "চট্টগ্রামে পটিয়ার পর নগরেও সড়ক অবরোধ বৈষম্যবিরোধী ও এনসিপির নেতা-কর্মীদের",
-         pubsh_time: "২ ঘন্টা আগে",
-         des: "|",
-         catg: "জাতীয়",
-         img: Bnimg1,
-      },
-      {
-         topic: "",
          head: "অমীমাংসিত সংস্কার প্রস্তাব নিয়ে গণশুনানি করতে আলী রীয়াজকে চিঠি আইনজীবীর",
-         pubsh_time: "৩ ঘন্টা আগে",
+         pubsh_time: "২ ঘন্টা আগে",
          des: "|",
          catg: "রাজনীতি",
          img: Bnimg2,
+      },
+      {
+         topic: "",
+         head: "চট্টগ্রামে পটিয়ার পর নগরেও সড়ক অবরোধ বৈষম্যবিরোধী ও এনসিপির নেতা-কর্মীদের",
+         pubsh_time: "৩ ঘন্টা আগে",
+         des: "|",
+         catg: "জাতীয়",
+         img: Bnimg1,
       },
       {
          topic: "",
@@ -59,16 +59,16 @@ const Bangla = () => {
    ];
 
    return (
-      <section className="pt-10 bg-[#181B22] pb-10" id="politics">
+      <section className="pt-10 bg-[#181B22] pb-10 sm:px-0 px-4" id="politics">
          <Container>
            <div className="flex items-center justify-between">
              <div className="flex items-center gap-2">
                <h2 className="font-noto font-medium text-[24px] text-textcol2">
                   বাংলা
                </h2>
-               <div className="w-[950px] h-px bg-[#808080]"></div>
+               <div className="w-[280px] sm:w-[950px] h-px bg-[#808080]"></div>
             </div>
-            <div className="flex items-center gap-1 text-textcol2 hover:text-blue-400 transition-all duration-200">
+            <div className="hidden sm:flex items-center gap-1 text-textcol2 hover:text-blue-400 transition-all duration-200">
                                          <a href="#politics" className="font-noto font-normal text-[14px] leading-3.5 ">আরও পড়ুন</a>
                                        <MdOutlineArrowOutward />
                                        </div>
@@ -76,7 +76,7 @@ const Bangla = () => {
 
             <div className="flex flex-col sm:flex-row items-center gap-12 mt-8">
                <div> 
-                  <h2 className="font-noto font-normal mb-4 text-[24px]  text-textcol2">রাজনীতি</h2>
+                  <h2 className="font-noto font-normal mb-4 text-[24px] text-textcol2 px-2 sm:px-0">রাজনীতি</h2>
                   {banglaTopNews.map((newsbn, index) => (
                      <TopNewsbBn key={index} topnewsb={newsbn} />
                   ))}
@@ -84,7 +84,7 @@ const Bangla = () => {
 
                <div className="flex flex-col gap-6">
                   <div className="w-fit flex flex-col items-center">
-                     <h2 className="font-noto font-normal  text-[24px] text-textcol2">সর্বশেষ</h2>
+                     <h2 className="font-noto font-normal text-[20px] sm:text-[24px] text-textcol2">সর্বশেষ</h2>
                      <div className="w-full h-px bg-textcol2"></div>
                   </div>
                   {bnNewshead.map((bnitem, index)=>(

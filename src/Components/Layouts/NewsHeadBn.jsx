@@ -5,7 +5,7 @@ const NewsHeadBn = ({headbn}) => {
   return (
     <div className="flex items-center gap-3">
              <div>
-                <h2 className="font-noto text-[20px] leading-[30px] font-medium text-textcol2 cursor-pointer hover:text-hvcol transition-all duration-300">
+                <h2 className="font-noto text-[15px] sm:text-[20px] leading-[30px] font-normal sm:font-medium text-textcol2 cursor-pointer hover:text-hvcol transition-all duration-300">
                    <span className="text-[#BD713A]  ">{headbn.topic}</span>
                    {headbn.head}
                 </h2>
@@ -14,12 +14,12 @@ const NewsHeadBn = ({headbn}) => {
                       <MdOutlineWatchLater />
                       {headbn.pubsh_time}
                    </h6>
-                   <h6 className="text-[#BD713A] font-noto">{headbn.des}</h6>
-                   <h6 className='text-textcol2 font-noto'>{headbn.catg}</h6>
-                   <h6 className='text-textcol2 font-noto'>{headbn.place}</h6>
+                   <h6 className="text-[#BD713A] text-[14px] font-noto">{headbn.des}</h6>
+                   <h6 className='text-textcol2 text-[14px] font-noto'>{headbn.catg}</h6>
+                   <h6 className='text-textcol2 text-[14px] font-noto'>{headbn.place}</h6>
                 </div>
              </div>
-             <img src={headbn.img} alt={headbn.topic} className="w-[193px]" />
+             <img src={headbn.img} alt={headbn.topic} className="w-[124px]  sm:w-[193px]" />
           </div>
   )
 }

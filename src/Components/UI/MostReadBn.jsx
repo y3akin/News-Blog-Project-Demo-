@@ -61,6 +61,32 @@ const MostReadBn = () => {
          views: "১ হাজার",
       },
    ];
+   let mstReadBn2 = [
+      {
+         img: Img_1,
+         head: "ব্যালট প্রকল্পে ইসিকে ৪৮ লাখ ডলারের আর্থিক সহায়তা দেবে জাপান",
+         time: "৪ সপ্তাহ আগে",
+         views: "৫ হাজার",
+      },
+      {
+         img: Img_2,
+         head: "ঋতুপর্ণার গোলে এগিয়ে থেকে প্রথমার্ধ শেষ করল বাংলাদেশ",
+         time: "৩ সপ্তাহ আগে",
+         views: "৪ হাজার",
+      },
+      {
+         img: Img_3,
+         head: "আদালতে স্বীকারোক্তিমূলক জবানবন্দি দিলেন সাবেক সিইসি নূরুল হুদা",
+         time: "২ সপ্তাহ আগে",
+         views: "২ হাজার",
+      },
+      {
+         img: Img_4,
+         head: "সিলেটের ডিসিকে ‘ব্যর্থ’ দাবি করে প্রত্যাহার চেয়ে রাজপথে অবস্থান আরিফুলের",
+         time: "২ সপ্তাহ আগে",
+         views: "১ হাজার",
+      },
+   ];
 
    const NextArrow = ({ onClick }) => (
       <MdOutlineKeyboardArrowRight
@@ -96,11 +122,19 @@ const MostReadBn = () => {
             <div className="w-full h-px bg-[#EC8D49]"></div>
          </div>
 
-         <Slider {...settings}>
-            {mstReadBn.map((item, index) => (
-               <MostReadDisBn key={index} newsbn={item} />
+         <div className="w-full hidden sm:block">
+            <Slider {...settings}>
+               {mstReadBn.map((item, index) => (
+                  <MostReadDisBn key={index} newsbn={item} />
+               ))}
+            </Slider>
+         </div>
+
+         <div className="w-full sm:hidden block">
+            {mstReadBn2.map((item, i) => (
+               <MostReadDisBn key={i} newsbn={item} bBorder={i === mstReadBn2.length - 1} />
             ))}
-         </Slider>
+         </div>
       </section>
    );
 };

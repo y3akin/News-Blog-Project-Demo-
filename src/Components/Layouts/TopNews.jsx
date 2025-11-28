@@ -12,7 +12,7 @@ const TopNews = ({ topnews }) => {
             <h2 className="font-rob text-[32px] sm:text-[40px] sm:leading-12 font-semibold mt-2 cursor-pointer hover:text-[#BD713A] transition-all duration-300">
                {topnews.head}
             </h2>
-            <p className="font-rob text-4 font-normal leading-5 text-[#515151] mt-2 relative left-2">
+            <p className="font-rob text-[14px] sm:text-[16px] font-normal leading-5 text-[#515151] mt-2 relative left-2">
                   <span className="w-px h-full bg-black absolute top-0 -left-2"></span>
                {topnews.desp}
             </p>
