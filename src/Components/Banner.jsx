@@ -61,7 +61,7 @@ const Banner = () => {
    return (
       <section className=" bg-[#FFFFFF] sm:bg-[#F2F2F2] pt-6 pb-12" id="home">
          <Container>
-            <div className="flex flex-col sm:flex-row items-start gap-[30px]  ">
+            <div className="flex flex-col sm:flex-row items-center gap-[30px]  ">
                <div>
                   {bannerTopNews.map((topitem) => (
                      <TopNews topnews={topitem} />
