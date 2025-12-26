@@ -122,7 +122,7 @@ const Natinal_Addm = () => {
                             <h2 className="font-rob font-medium text-2xl tracking-[0.02em]">Administration</h2>
                             <div className="w-[170px] sm:w-60 h-px bg-[#919191]"></div>
                           </div>
-                        <div className="px-3 flex items-center gap-1  hover:text-blue-500 transition-all duration-200">
+                        <div className="px-3 hidden sm:flex items-center gap-1  hover:text-blue-500 transition-all duration-200">
                           <a href="#nat_add" className="font-rob font-normal text-[14px] leading-3.5 ">Read More</a>
                         <MdOutlineArrowOutward/>
                         </div>
