@@ -141,7 +141,7 @@ const MostRead = () => {
                   />
                ))}
             </div>
-            <button className="flex sm:hidden mt-6 mx-auto items-center gap-1 font-rob font-normal text-[14px] text-[#1E222B] p-3 border border-[#1E222B] rounded-3xl hover:bg-[#1E222B] hover:text-textcol2 transition-all duration-300">
+            <button className="flex sm:hidden mt-6 mx-auto items-center gap-1 font-rob font-normal text-[14px] text-[#1E222B] p-0 sm:p-3 border border-[#1E222B] rounded-3xl hover:bg-[#1E222B] hover:text-textcol2 transition-all duration-300">
                Read More <BsArrowUpRight />
             </button>
          </div>

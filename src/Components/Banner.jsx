@@ -79,7 +79,7 @@ const Banner = () => {
                </div>
             </div>
 
-            <div className="block sm:hidden bg-[#F2F2F2] sm:bg-transparent mt-6 pt-6 p-4">
+            <div className=" sm:hidden bg-[#F2F2F2] sm:bg-transparent mt-6 pt-6 ">
                <div className="sm:hidden flex items-center gap-2.5 mb-6">
                   <h2 className="font-rob font-medium text-xl text-[#262626]">
                      Latest
