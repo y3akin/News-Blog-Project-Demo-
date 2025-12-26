@@ -84,7 +84,7 @@ const Banner = () => {
                   <h2 className="font-rob font-medium text-xl text-[#262626]">
                      Latest
                   </h2>
-                  <div className="w-full h-px bg-black"></div>
+                  <div className="w-[250px] h-px bg-black"></div>
                </div>
                <div className=" flex flex-col gap-8 items-start">
                   {newsHeadLine.map((item, i) => (
